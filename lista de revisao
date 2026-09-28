@@ -1,0 +1,921 @@
+# Lista de Exercícios – Pseudocódigo e Fluxograma
+## Pseudocódigo dos 35 exercícios
+
+---
+
+# PARTE I – ALGORITMOS SEQUENCIAIS
+
+## Exercício 1 — Saudação
+```
+ALGORITMO Saudacao
+VAR
+    nome: cadeia
+INICIO
+    ESCREVA("Digite seu nome: ")
+    LEIA(nome)
+    ESCREVA("Ola, ", nome, "! Seja bem-vindo(a) a disciplina de Logica de Programacao.")
+FIMALGORITMO
+```
+
+## Exercício 2 — Soma de dois números
+```
+ALGORITMO SomaDoisNumeros
+VAR
+    num1, num2, soma: inteiro
+INICIO
+    ESCREVA("Digite o primeiro numero: ")
+    LEIA(num1)
+    ESCREVA("Digite o segundo numero: ")
+    LEIA(num2)
+
+    soma <- num1 + num2
+
+    ESCREVA("Primeiro numero: ", num1)
+    ESCREVA("Segundo numero: ", num2)
+    ESCREVA("Soma: ", soma)
+FIMALGORITMO
+```
+
+## Exercício 3 — Quatro operações
+```
+ALGORITMO QuatroOperacoes
+VAR
+    num1, num2: real
+    soma, subtracao, multiplicacao, divisao: real
+INICIO
+    ESCREVA("Digite o primeiro numero: ")
+    LEIA(num1)
+    ESCREVA("Digite o segundo numero: ")
+    LEIA(num2)
+
+    soma <- num1 + num2
+    subtracao <- num1 - num2
+    multiplicacao <- num1 * num2
+    divisao <- num1 / num2
+
+    ESCREVA("Soma: ", soma)
+    ESCREVA("Subtracao: ", subtracao)
+    ESCREVA("Multiplicacao: ", multiplicacao)
+    ESCREVA("Divisao: ", divisao)
+FIMALGORITMO
+```
+
+## Exercício 4 — Média do aluno
+```
+ALGORITMO MediaAluno
+VAR
+    n1, n2, n3, media: real
+INICIO
+    ESCREVA("Digite a primeira nota: ")
+    LEIA(n1)
+    ESCREVA("Digite a segunda nota: ")
+    LEIA(n2)
+    ESCREVA("Digite a terceira nota: ")
+    LEIA(n3)
+
+    media <- (n1 + n2 + n3) / 3
+
+    ESCREVA("Media final: ", media)
+FIMALGORITMO
+```
+
+## Exercício 5 — Área do retângulo
+```
+ALGORITMO AreaRetangulo
+VAR
+    base, altura, area: real
+INICIO
+    ESCREVA("Digite a base: ")
+    LEIA(base)
+    ESCREVA("Digite a altura: ")
+    LEIA(altura)
+
+    area <- base * altura
+
+    ESCREVA("Area do retangulo: ", area)
+FIMALGORITMO
+```
+
+## Exercício 6 — Área do círculo
+```
+ALGORITMO AreaCirculo
+VAR
+    raio, area: real
+    PI: real
+INICIO
+    PI <- 3.14159
+    ESCREVA("Digite o raio: ")
+    LEIA(raio)
+
+    area <- PI * (raio * raio)
+
+    ESCREVA("Area do circulo: ", area)
+FIMALGORITMO
+```
+
+## Exercício 7 — Conversão de temperatura
+```
+ALGORITMO ConversaoTemperatura
+VAR
+    celsius, fahrenheit: real
+INICIO
+    ESCREVA("Digite a temperatura em Celsius: ")
+    LEIA(celsius)
+
+    fahrenheit <- (celsius * 9 / 5) + 32
+
+    ESCREVA("Temperatura em Fahrenheit: ", fahrenheit)
+FIMALGORITMO
+```
+
+## Exercício 8 — Salário mensal
+```
+ALGORITMO SalarioMensal
+VAR
+    horasTrabalhadas, valorHora, salario: real
+INICIO
+    ESCREVA("Digite a quantidade de horas trabalhadas: ")
+    LEIA(horasTrabalhadas)
+    ESCREVA("Digite o valor recebido por hora: ")
+    LEIA(valorHora)
+
+    salario <- horasTrabalhadas * valorHora
+
+    ESCREVA("Salario bruto: ", salario)
+FIMALGORITMO
+```
+
+## Exercício 9 — Consumo de combustível
+```
+ALGORITMO ConsumoCombustivel
+VAR
+    distancia, litros, consumoMedio: real
+INICIO
+    ESCREVA("Digite a distancia percorrida (km): ")
+    LEIA(distancia)
+    ESCREVA("Digite a quantidade de combustivel usada (litros): ")
+    LEIA(litros)
+
+    consumoMedio <- distancia / litros
+
+    ESCREVA("Consumo medio: ", consumoMedio, " km/L")
+FIMALGORITMO
+```
+
+## Exercício 10 — Valor da compra
+```
+ALGORITMO ValorCompra
+VAR
+    produto: cadeia
+    quantidade: inteiro
+    precoUnitario, total: real
+INICIO
+    ESCREVA("Digite o nome do produto: ")
+    LEIA(produto)
+    ESCREVA("Digite a quantidade comprada: ")
+    LEIA(quantidade)
+    ESCREVA("Digite o preco unitario: ")
+    LEIA(precoUnitario)
+
+    total <- quantidade * precoUnitario
+
+    ESCREVA("Produto: ", produto)
+    ESCREVA("Valor total da compra: ", total)
+FIMALGORITMO
+```
+
+---
+
+# PARTE II – ESTRUTURAS CONDICIONAIS
+
+## Exercício 11 — Maior de idade
+```
+ALGORITMO MaiorIdade
+VAR
+    idade: inteiro
+INICIO
+    ESCREVA("Digite a idade: ")
+    LEIA(idade)
+
+    SE idade >= 18 ENTAO
+        ESCREVA("Maior de idade")
+    SENAO
+        ESCREVA("Menor de idade")
+    FIMSE
+FIMALGORITMO
+```
+
+## Exercício 12 — Número positivo ou negativo
+```
+ALGORITMO PositivoNegativo
+VAR
+    numero: real
+INICIO
+    ESCREVA("Digite um numero: ")
+    LEIA(numero)
+
+    SE numero > 0 ENTAO
+        ESCREVA("Positivo")
+    SENAO
+        SE numero < 0 ENTAO
+            ESCREVA("Negativo")
+        SENAO
+            ESCREVA("Zero")
+        FIMSE
+    FIMSE
+FIMALGORITMO
+```
+
+## Exercício 13 — Número par ou ímpar
+```
+ALGORITMO ParImpar
+VAR
+    numero: inteiro
+INICIO
+    ESCREVA("Digite um numero inteiro: ")
+    LEIA(numero)
+
+    SE numero % 2 == 0 ENTAO
+        ESCREVA("Par")
+    SENAO
+        ESCREVA("Impar")
+    FIMSE
+FIMALGORITMO
+```
+
+## Exercício 14 — Maior entre dois números
+```
+ALGORITMO MaiorDoisNumeros
+VAR
+    num1, num2: real
+INICIO
+    ESCREVA("Digite o primeiro numero: ")
+    LEIA(num1)
+    ESCREVA("Digite o segundo numero: ")
+    LEIA(num2)
+
+    SE num1 > num2 ENTAO
+        ESCREVA("O maior numero e: ", num1)
+    SENAO
+        ESCREVA("O maior numero e: ", num2)
+    FIMSE
+FIMALGORITMO
+```
+
+## Exercício 15 — Maior entre três números
+```
+ALGORITMO MaiorTresNumeros
+VAR
+    num1, num2, num3, maior: real
+INICIO
+    ESCREVA("Digite o primeiro numero: ")
+    LEIA(num1)
+    ESCREVA("Digite o segundo numero: ")
+    LEIA(num2)
+    ESCREVA("Digite o terceiro numero: ")
+    LEIA(num3)
+
+    maior <- num1
+    SE num2 > maior ENTAO
+        maior <- num2
+    FIMSE
+    SE num3 > maior ENTAO
+        maior <- num3
+    FIMSE
+
+    ESCREVA("O maior numero e: ", maior)
+FIMALGORITMO
+```
+
+## Exercício 16 — Situação acadêmica
+```
+ALGORITMO SituacaoAcademica
+VAR
+    n1, n2, media: real
+INICIO
+    ESCREVA("Digite a primeira nota: ")
+    LEIA(n1)
+    ESCREVA("Digite a segunda nota: ")
+    LEIA(n2)
+
+    media <- (n1 + n2) / 2
+
+    ESCREVA("Media: ", media)
+
+    SE media >= 7 ENTAO
+        ESCREVA("Situacao: Aprovado")
+    SENAO
+        SE media >= 5 ENTAO
+            ESCREVA("Situacao: Recuperacao")
+        SENAO
+            ESCREVA("Situacao: Reprovado")
+        FIMSE
+    FIMSE
+FIMALGORITMO
+```
+
+## Exercício 17 — Desconto na compra
+```
+ALGORITMO DescontoCompra
+VAR
+    valorCompra, percentual, valorDesconto, valorFinal: real
+INICIO
+    ESCREVA("Digite o valor da compra: ")
+    LEIA(valorCompra)
+
+    SE valorCompra <= 100 ENTAO
+        percentual <- 0
+    SENAO
+        SE valorCompra <= 500 ENTAO
+            percentual <- 5
+        SENAO
+            percentual <- 10
+        FIMSE
+    FIMSE
+
+    valorDesconto <- valorCompra * (percentual / 100)
+    valorFinal <- valorCompra - valorDesconto
+
+    ESCREVA("Valor original: ", valorCompra)
+    ESCREVA("Percentual de desconto: ", percentual, "%")
+    ESCREVA("Valor do desconto: ", valorDesconto)
+    ESCREVA("Valor final: ", valorFinal)
+FIMALGORITMO
+```
+
+## Exercício 18 — Faixa etária
+```
+ALGORITMO FaixaEtaria
+VAR
+    idade: inteiro
+INICIO
+    ESCREVA("Digite a idade: ")
+    LEIA(idade)
+
+    SE idade <= 12 ENTAO
+        ESCREVA("Crianca")
+    SENAO
+        SE idade <= 17 ENTAO
+            ESCREVA("Adolescente")
+        SENAO
+            SE idade <= 59 ENTAO
+                ESCREVA("Adulto")
+            SENAO
+                ESCREVA("Idoso")
+            FIMSE
+        FIMSE
+    FIMSE
+FIMALGORITMO
+```
+
+## Exercício 19 — Cálculo do IMC
+```
+ALGORITMO CalculoIMC
+VAR
+    peso, altura, imc: real
+INICIO
+    ESCREVA("Digite o peso (kg): ")
+    LEIA(peso)
+    ESCREVA("Digite a altura (m): ")
+    LEIA(altura)
+
+    imc <- peso / (altura * altura)
+
+    ESCREVA("IMC: ", imc)
+
+    SE imc < 18.5 ENTAO
+        ESCREVA("Classificacao: Abaixo do peso")
+    SENAO
+        SE imc <= 24.9 ENTAO
+            ESCREVA("Classificacao: Peso adequado")
+        SENAO
+            SE imc <= 29.9 ENTAO
+                ESCREVA("Classificacao: Sobrepeso")
+            SENAO
+                ESCREVA("Classificacao: Obesidade")
+            FIMSE
+        FIMSE
+    FIMSE
+FIMALGORITMO
+```
+
+## Exercício 20 — Calculadora
+```
+ALGORITMO Calculadora
+VAR
+    num1, num2, resultado: real
+    operacao: caractere
+INICIO
+    ESCREVA("Digite o primeiro numero: ")
+    LEIA(num1)
+    ESCREVA("Digite o segundo numero: ")
+    LEIA(num2)
+    ESCREVA("Digite a operacao (+, -, *, /): ")
+    LEIA(operacao)
+
+    SE operacao == '+' ENTAO
+        resultado <- num1 + num2
+        ESCREVA("Resultado: ", resultado)
+    SENAO
+        SE operacao == '-' ENTAO
+            resultado <- num1 - num2
+            ESCREVA("Resultado: ", resultado)
+        SENAO
+            SE operacao == '*' ENTAO
+                resultado <- num1 * num2
+                ESCREVA("Resultado: ", resultado)
+            SENAO
+                SE operacao == '/' ENTAO
+                    SE num2 == 0 ENTAO
+                        ESCREVA("Erro: divisao por zero")
+                    SENAO
+                        resultado <- num1 / num2
+                        ESCREVA("Resultado: ", resultado)
+                    FIMSE
+                SENAO
+                    ESCREVA("Operacao invalida")
+                FIMSE
+            FIMSE
+        FIMSE
+    FIMSE
+FIMALGORITMO
+```
+
+---
+
+# PARTE III – ESTRUTURAS DE REPETIÇÃO
+
+## Exercício 21 — Contagem crescente
+```
+ALGORITMO ContagemCrescente
+VAR
+    i: inteiro
+INICIO
+    PARA i DE 1 ATE 10 FACA
+        ESCREVA(i)
+    FIMPARA
+FIMALGORITMO
+```
+
+## Exercício 22 — Contagem regressiva
+```
+ALGORITMO ContagemRegressiva
+VAR
+    i: inteiro
+INICIO
+    PARA i DE 10 ATE 0 PASSO -1 FACA
+        ESCREVA(i)
+    FIMPARA
+    ESCREVA("Fim da contagem!")
+FIMALGORITMO
+```
+
+## Exercício 23 — Números pares
+```
+ALGORITMO NumerosPares
+VAR
+    i: inteiro
+INICIO
+    PARA i DE 1 ATE 100 FACA
+        SE i % 2 == 0 ENTAO
+            ESCREVA(i)
+        FIMSE
+    FIMPARA
+FIMALGORITMO
+```
+
+## Exercício 24 — Tabuada
+```
+ALGORITMO Tabuada
+VAR
+    numero, i, resultado: inteiro
+INICIO
+    ESCREVA("Digite um numero inteiro: ")
+    LEIA(numero)
+
+    PARA i DE 1 ATE 10 FACA
+        resultado <- numero * i
+        ESCREVA(numero, " x ", i, " = ", resultado)
+    FIMPARA
+FIMALGORITMO
+```
+
+## Exercício 25 — Soma de 1 até N
+```
+ALGORITMO SomaAteN
+VAR
+    n, i, soma: inteiro
+INICIO
+    ESCREVA("Digite um numero inteiro positivo N: ")
+    LEIA(n)
+
+    soma <- 0
+    PARA i DE 1 ATE n FACA
+        soma <- soma + i
+    FIMPARA
+
+    ESCREVA("Soma de 1 ate ", n, " = ", soma)
+FIMALGORITMO
+```
+
+## Exercício 26 — Média da turma
+```
+ALGORITMO MediaTurma
+VAR
+    qtdAlunos, i: inteiro
+    nota, soma, media: real
+INICIO
+    ESCREVA("Digite a quantidade de alunos: ")
+    LEIA(qtdAlunos)
+
+    soma <- 0
+    PARA i DE 1 ATE qtdAlunos FACA
+        ESCREVA("Digite a nota do aluno ", i, ": ")
+        LEIA(nota)
+        soma <- soma + nota
+    FIMPARA
+
+    media <- soma / qtdAlunos
+
+    ESCREVA("Media geral da turma: ", media)
+FIMALGORITMO
+```
+
+## Exercício 27 — Aprovados e reprovados
+```
+ALGORITMO AprovadosReprovados
+VAR
+    i: inteiro
+    nota: real
+    aprovados, reprovados: inteiro
+    percentualAprovacao: real
+INICIO
+    aprovados <- 0
+    reprovados <- 0
+
+    PARA i DE 1 ATE 10 FACA
+        ESCREVA("Digite a nota do aluno ", i, ": ")
+        LEIA(nota)
+
+        SE nota >= 7 ENTAO
+            aprovados <- aprovados + 1
+        SENAO
+            reprovados <- reprovados + 1
+        FIMSE
+    FIMPARA
+
+    percentualAprovacao <- (aprovados / 10) * 100
+
+    ESCREVA("Aprovados: ", aprovados)
+    ESCREVA("Reprovados: ", reprovados)
+    ESCREVA("Percentual de aprovacao: ", percentualAprovacao, "%")
+FIMALGORITMO
+```
+
+## Exercício 28 — Maior número
+```
+ALGORITMO MaiorNumero
+VAR
+    i, numero, maior: inteiro
+INICIO
+    ESCREVA("Digite o numero 1: ")
+    LEIA(maior)
+
+    PARA i DE 2 ATE 10 FACA
+        ESCREVA("Digite o numero ", i, ": ")
+        LEIA(numero)
+        SE numero > maior ENTAO
+            maior <- numero
+        FIMSE
+    FIMPARA
+
+    ESCREVA("O maior numero informado foi: ", maior)
+FIMALGORITMO
+```
+
+## Exercício 29 — Senha
+```
+ALGORITMO Senha
+VAR
+    senhaDigitada, senhaCorreta: inteiro
+INICIO
+    senhaCorreta <- 1234
+    ESCREVA("Digite a senha: ")
+    LEIA(senhaDigitada)
+
+    ENQUANTO senhaDigitada != senhaCorreta FACA
+        ESCREVA("Senha incorreta. Tente novamente.")
+        ESCREVA("Digite a senha: ")
+        LEIA(senhaDigitada)
+    FIMENQUANTO
+
+    ESCREVA("Acesso autorizado.")
+FIMALGORITMO
+```
+
+## Exercício 30 — Caixa eletrônico
+```
+ALGORITMO CaixaEletronico
+VAR
+    saldo, valor: real
+    opcao: inteiro
+INICIO
+    saldo <- 1000.00
+    opcao <- 0
+
+    ENQUANTO opcao != 4 FACA
+        ESCREVA("1. Consultar saldo")
+        ESCREVA("2. Depositar")
+        ESCREVA("3. Sacar")
+        ESCREVA("4. Sair")
+        ESCREVA("Escolha uma opcao: ")
+        LEIA(opcao)
+
+        SE opcao == 1 ENTAO
+            ESCREVA("Saldo atual: ", saldo)
+        SENAO
+            SE opcao == 2 ENTAO
+                ESCREVA("Digite o valor do deposito: ")
+                LEIA(valor)
+                saldo <- saldo + valor
+                ESCREVA("Deposito realizado. Novo saldo: ", saldo)
+            SENAO
+                SE opcao == 3 ENTAO
+                    ESCREVA("Digite o valor do saque: ")
+                    LEIA(valor)
+                    SE valor <= saldo ENTAO
+                        saldo <- saldo - valor
+                        ESCREVA("Saque realizado. Novo saldo: ", saldo)
+                    SENAO
+                        ESCREVA("Saldo insuficiente.")
+                    FIMSE
+                SENAO
+                    SE opcao != 4 ENTAO
+                        ESCREVA("Opcao invalida.")
+                    FIMSE
+                FIMSE
+            FIMSE
+        FIMSE
+    FIMENQUANTO
+
+    ESCREVA("Encerrando o sistema. Ate logo!")
+FIMALGORITMO
+```
+
+---
+
+# PARTE IV – DESAFIOS
+
+## Exercício 31 — Posto de combustível
+```
+ALGORITMO PostoCombustivel
+VAR
+    litros, precoLitro, valorBruto, percentualDesconto, desconto, valorFinal: real
+INICIO
+    ESCREVA("Digite a quantidade de litros abastecidos: ")
+    LEIA(litros)
+    ESCREVA("Digite o preco do litro: ")
+    LEIA(precoLitro)
+
+    valorBruto <- litros * precoLitro
+
+    SE litros < 20 ENTAO
+        percentualDesconto <- 0
+    SENAO
+        SE litros <= 40 ENTAO
+            percentualDesconto <- 3
+        SENAO
+            percentualDesconto <- 5
+        FIMSE
+    FIMSE
+
+    desconto <- valorBruto * (percentualDesconto / 100)
+    valorFinal <- valorBruto - desconto
+
+    ESCREVA("Valor bruto: ", valorBruto)
+    ESCREVA("Desconto: ", desconto)
+    ESCREVA("Valor final: ", valorFinal)
+FIMALGORITMO
+```
+
+## Exercício 32 — Sistema de estacionamento
+```
+ALGORITMO SistemaEstacionamento
+VAR
+    horaEntrada, horaSaida, horasPermanencia: inteiro
+    valorTotal: real
+INICIO
+    ESCREVA("Digite a hora de entrada: ")
+    LEIA(horaEntrada)
+    ESCREVA("Digite a hora de saida: ")
+    LEIA(horaSaida)
+
+    horasPermanencia <- horaSaida - horaEntrada
+
+    SE horasPermanencia <= 1 ENTAO
+        valorTotal <- 10.00
+    SENAO
+        valorTotal <- 10.00 + (horasPermanencia - 1) * 5.00
+    FIMSE
+
+    ESCREVA("Tempo de permanencia: ", horasPermanencia, " hora(s)")
+    ESCREVA("Valor total: ", valorTotal)
+FIMALGORITMO
+```
+
+## Exercício 33 — Eleição
+```
+ALGORITMO Eleicao
+VAR
+    voto: inteiro
+    votosCandidato1, votosCandidato2, votosCandidato3, totalVotos: inteiro
+INICIO
+    votosCandidato1 <- 0
+    votosCandidato2 <- 0
+    votosCandidato3 <- 0
+    totalVotos <- 0
+
+    ESCREVA("Digite o voto (1, 2 ou 3). Digite 0 para encerrar: ")
+    LEIA(voto)
+
+    ENQUANTO voto != 0 FACA
+        SE voto == 1 ENTAO
+            votosCandidato1 <- votosCandidato1 + 1
+        SENAO
+            SE voto == 2 ENTAO
+                votosCandidato2 <- votosCandidato2 + 1
+            SENAO
+                SE voto == 3 ENTAO
+                    votosCandidato3 <- votosCandidato3 + 1
+                FIMSE
+            FIMSE
+        FIMSE
+
+        totalVotos <- totalVotos + 1
+
+        ESCREVA("Digite o voto (1, 2 ou 3). Digite 0 para encerrar: ")
+        LEIA(voto)
+    FIMENQUANTO
+
+    ESCREVA("Votos candidato 1: ", votosCandidato1)
+    ESCREVA("Votos candidato 2: ", votosCandidato2)
+    ESCREVA("Votos candidato 3: ", votosCandidato3)
+    ESCREVA("Total de votos: ", totalVotos)
+
+    SE votosCandidato1 > votosCandidato2 E votosCandidato1 > votosCandidato3 ENTAO
+        ESCREVA("Candidato vencedor: Candidato 1")
+    SENAO
+        SE votosCandidato2 > votosCandidato3 ENTAO
+            ESCREVA("Candidato vencedor: Candidato 2")
+        SENAO
+            ESCREVA("Candidato vencedor: Candidato 3")
+        FIMSE
+    FIMSE
+FIMALGORITMO
+```
+
+## Exercício 34 — Sistema de vendas
+```
+ALGORITMO SistemaVendas
+VAR
+    continuar: caractere
+    produto: cadeia
+    quantidade: inteiro
+    precoUnitario, totalVenda, faturamentoTotal, maiorVenda: real
+    qtdVendas, totalProdutosVendidos: inteiro
+INICIO
+    qtdVendas <- 0
+    totalProdutosVendidos <- 0
+    faturamentoTotal <- 0
+    maiorVenda <- 0
+
+    ESCREVA("Deseja registrar uma venda? (S/N): ")
+    LEIA(continuar)
+
+    ENQUANTO continuar == 'S' FACA
+        ESCREVA("Digite o nome do produto: ")
+        LEIA(produto)
+        ESCREVA("Digite a quantidade: ")
+        LEIA(quantidade)
+        ESCREVA("Digite o preco unitario: ")
+        LEIA(precoUnitario)
+
+        totalVenda <- quantidade * precoUnitario
+
+        qtdVendas <- qtdVendas + 1
+        totalProdutosVendidos <- totalProdutosVendidos + quantidade
+        faturamentoTotal <- faturamentoTotal + totalVenda
+
+        SE totalVenda > maiorVenda ENTAO
+            maiorVenda <- totalVenda
+        FIMSE
+
+        ESCREVA("Deseja registrar outra venda? (S/N): ")
+        LEIA(continuar)
+    FIMENQUANTO
+
+    ESCREVA("Quantidade de vendas realizadas: ", qtdVendas)
+    ESCREVA("Quantidade total de produtos vendidos: ", totalProdutosVendidos)
+    ESCREVA("Faturamento total: ", faturamentoTotal)
+    ESCREVA("Maior venda realizada: ", maiorVenda)
+FIMALGORITMO
+```
+
+## Exercício 35 — Sistema acadêmico
+```
+ALGORITMO SistemaAcademico
+VAR
+    qtdAlunos, i: inteiro
+    nome: cadeia
+    n1, n2, media: real
+    aprovados, recuperacao, reprovados: inteiro
+    somaMedias, mediaGeral, maiorMedia, menorMedia: real
+INICIO
+    ESCREVA("Digite a quantidade de alunos: ")
+    LEIA(qtdAlunos)
+
+    aprovados <- 0
+    recuperacao <- 0
+    reprovados <- 0
+    somaMedias <- 0
+    maiorMedia <- 0
+    menorMedia <- 10
+
+    PARA i DE 1 ATE qtdAlunos FACA
+        ESCREVA("Digite o nome do aluno: ")
+        LEIA(nome)
+        ESCREVA("Digite a nota da primeira avaliacao: ")
+        LEIA(n1)
+        ESCREVA("Digite a nota da segunda avaliacao: ")
+        LEIA(n2)
+
+        media <- (n1 + n2) / 2
+        somaMedias <- somaMedias + media
+
+        SE media >= 7 ENTAO
+            aprovados <- aprovados + 1
+        SENAO
+            SE media >= 5 ENTAO
+                recuperacao <- recuperacao + 1
+            SENAO
+                reprovados <- reprovados + 1
+            FIMSE
+        FIMSE
+
+        SE media > maiorMedia ENTAO
+            maiorMedia <- media
+        FIMSE
+        SE media < menorMedia ENTAO
+            menorMedia <- media
+        FIMSE
+
+        ESCREVA(nome, " - Media: ", media)
+    FIMPARA
+
+    mediaGeral <- somaMedias / qtdAlunos
+
+    ESCREVA("Quantidade de alunos: ", qtdAlunos)
+    ESCREVA("Aprovados: ", aprovados)
+    ESCREVA("Em recuperacao: ", recuperacao)
+    ESCREVA("Reprovados: ", reprovados)
+    ESCREVA("Media geral da turma: ", mediaGeral)
+    ESCREVA("Maior media: ", maiorMedia)
+    ESCREVA("Menor media: ", menorMedia)
+FIMALGORITMO
+```
+
+---
+
+# DESAFIO FINAL – Sistema de Notas de Alunos
+
+*(já resolvido anteriormente, com entradas/processamento/saídas, pseudocódigo, fluxograma e teste de mesa completos)*
+
+```
+ALGORITMO SistemaNotas
+VAR
+    nome: cadeia
+    nota1, nota2, nota3: real
+    media: real
+INICIO
+    ESCREVA("Digite o nome do aluno: ")
+    LEIA(nome)
+    ESCREVA("Digite a primeira nota: ")
+    LEIA(nota1)
+    ESCREVA("Digite a segunda nota: ")
+    LEIA(nota2)
+    ESCREVA("Digite a terceira nota: ")
+    LEIA(nota3)
+
+    media <- (nota1 + nota2 + nota3) / 3
+
+    SE media >= 7 ENTAO
+        ESCREVA(nome, " foi APROVADO com media ", media)
+    SENAO
+        SE media >= 5 ENTAO
+            ESCREVA(nome, " esta em RECUPERACAO com media ", media)
+        SENAO
+            ESCREVA(nome, " foi REPROVADO com media ", media)
+        FIMSE
+    FIMSE
+FIMALGORITMO
+```
